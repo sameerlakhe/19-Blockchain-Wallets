@@ -10,13 +10,16 @@ Integrate the Ethereum blockchain network into an application in order to enable
 Fintech Finder is an application that its customers can use to find fintech professionals from among a list of candidates, hire them, and pay them. The task is to integrate the Ethereum blockchain network into the application in order to enable  customers to instantly pay the fintech professionals whom they hire with cryptocurrency.
 
 
-### Action items
+### Contents
 
 The first file is called `fintech_finder.py`. It contains the code associated with the web interface of the application. 
 
 The second file is called `crypto_wallet.py`. This file contains the Ethereum transaction functions. It import statements,from  `crypto_wallet.py` Python script into the Fintech Finder interface program i.e in the `fintech_finder.py` file.
 
 Integrating these two files allows to automate the tasks associated with generating a digital wallet, accessing Ethereum account balances, and signing and sending transactions via a personal Ethereum blockchain called Ganache.
+
+
+### Steps taken
 
 Specifically, following steps are taken -
 
@@ -60,7 +63,7 @@ This is accomplished using  the following steps:
 
 2. Then allow a customer to send an Ethereum blockchain transaction that pays the hired candidate. To accomplish this, the `send_transaction` function (which is imported from the `crypto_wallet` script file) is used and required data like etherreum account information, candidate_address, wage is passed
 
-≈Step 3: Inspect the Transaction
+#### Step 3: Inspect the Transaction
 
 The application’s web interface can be used to test the transaction, and we can then look up the resulting transaction in Ganache. 
 
@@ -75,19 +78,30 @@ The application’s web interface can be used to test the transaction, and we ca
 
 ---
 ## Balance in client account used to send ether
+The Client's account address 0x1a5D3d835984588AD0fCb259Cc543d26D8110a67 is used to send the ether and initially it shows a balance of 99 ETH
+
 ![Balance in client account used to send ether](Images/ClientAccountInitialBalance_2.png)
 
 ---
+## Selected candidate and amount of hours to be paid
+The Client selected candidate Ash who worked for 2 hours , has an hourly rate of 0.33 ether and whose ethereum account address is  0x2422858F9C4480c2724A309D58Ffd7Ac8bF65396 
+
+![Selected candidate and amount of hours to be paid ](Images/SelectedCandidateAndHours2_1.png)
+
+---
 ## Streamlit page after sending ether showing transaction hash
+The total wage to be paid for 2 hours at hourly rate of 0.33 ETH comes to 0.66 ETH
 ![Streamlit page after sending ether showing transaction hash](Images/SendTransactionsRecipient_3.png)
 
 ---
 ## Remaining balance in client account after sending ether
+The remaining balance will be Initial balance - ETH send + transaction fees (0 in this case as this is local proof of auhtority blockchain) which is 99 - 0.66 = 98.34
 ![Remaining balance in client account after sending ether](Images/ClientAccountBalanceAfterSendingEther_4.png)
 
 ---
 ## Transaction details in Ganache local blockchain
-![Transaction details in Ganache local blockchain](Images/1TransactionDetails1_5.png)
+The below screenshot shows the details of the transation from sender address (0x1a5D3d835984588AD0fCb259Cc543d26D8110a67) to recipient address (0x2422858F9C4480c2724A309D58Ffd7Ac8bF65396)
+![Transaction details in Ganache local blockchain](Images/TransactionDetails1_5.png)
 
 ---
 ## Additional transaction details in Ganache local blockchain
