@@ -230,13 +230,13 @@ st.sidebar.markdown("## Total Wage in Ether")
 # variable named `wage`.
 # * Write the `wage` variable to the Streamlit sidebar by using `st.sidebar.write`.
 
-# @TODO
+
 # Calculate total `wage` for the candidate by multiplying the candidate’s hourly
 # rate from the candidate database (`candidate_database[person][3]`) by the
 # value of the `hours` variable
 hourly_rate  = candidate_database[person][3]
 
-# @TODO
+
 # Write the `wage` calculation to the Streamlit sidebar
 wage = hours * hourly_rate
 st.sidebar.write(wage)
@@ -261,7 +261,7 @@ st.sidebar.write(wage)
 
 if st.sidebar.button("Send Transaction"):
 
-    # @TODO
+
     # Call the `send_transaction` function and pass it 3 parameters:
     # Your `account`, the `candidate_address`, and the `wage` as parameters
     # Save the returned transaction hash as a variable named `transaction_hash`
